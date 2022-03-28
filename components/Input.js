@@ -140,18 +140,18 @@ function Input () {
                </div>
    
                {showEmojis && (
-                 <Picker
-                   onSelect={addEmoji}
-                   style={{
-                     position: "absolute",
-                     marginTop: "465px",
-                     marginLeft: -40,
-                     maxWidth: "320px",
-                     borderRadius: "20px",
-                   }}
-                   theme="dark"
-                 />
-               )}
+                <Picker
+                  onSelect={addEmoji}
+                  style={{
+                    position: "absolute",
+                    marginTop: "465px",
+                    marginLeft: -40,
+                    maxWidth: "320px",
+                    borderRadius: "20px",
+                  }}
+                  theme="dark"
+                />
+              )}
              </div>
              <button
                className="bg-[#1d9bf0] text-white rounded-full
