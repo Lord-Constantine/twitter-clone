@@ -7,6 +7,7 @@ import { useSession } from "next-auth/react";
 import Post from "./Post";
 
 function Feed () {
+  const {data: session} = useSession();
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {

@@ -20,12 +20,12 @@ import { getDownloadURL, ref, uploadString } from "@firebase/storage";
 import { useSession, signOut} from "next-auth/react";
 
 function Input () {
+  const { data: session } = useSession();
   const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
-  const [showEmojis, setShowEmojis] = useState();
   const filePickerRef = useRef(null);
-  const [loading, setLoading] = useState(false)
-  const {data:session} = useSession()
+  const [showEmojis, setShowEmojis] = useState(false);
 
   const sendPost = async () => {
       if (loading) return;

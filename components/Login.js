@@ -1,20 +1,20 @@
-import React from "react";
-import Image from "next/image";
 import { signIn } from "next-auth/react";
+import Image from "next/image";
 
-function Login ({ providers }) {
+function Login({ providers }) {
   return (
-    <div className='flex flex-col items-center space-y-20 pt-48'>
+    <div className="flex flex-col items-center space-y-20 pt-48">
       <Image
         src="https://rb.gy/ogau5a"
         width={150}
         height={150}
         objectFit="contain"
       />
+
       <div>
         {Object.values(providers).map((provider) => (
           <div key={provider.name}>
-            {/* https://devdojo.com/tailwindcss/buttons#_ */}
+            {/* https://devdojo.com/tailwindcss/buttons */}
             <button
               href="#_"
               className="relative inline-flex items-center justify-center p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 hover:ring-purple-500"
@@ -29,6 +29,6 @@ function Login ({ providers }) {
       </div>
     </div>
   );
-};
+}
 
 export default Login;
