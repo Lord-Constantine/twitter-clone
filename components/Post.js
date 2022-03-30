@@ -134,7 +134,6 @@ function Post ({ id, post, postPage }) {
         )}
         <img 
         src={post?.image}
-        alt='Post Image'
         className='rounded-2xl max-h-[700px] object-cover mr-2'
         />
         <div className={`text-[#6e767d] flex justify-between w-10/12 ${postPage && 'mx-auto'}`}>
